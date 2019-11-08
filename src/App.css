@@ -1,33 +1,169 @@
-.App {
-  text-align: center;
+@font-face {
+   font-family: brownStdRegular;
+   src: url(./fonts/BrownStd-Regular.woff);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+   font-family: portraitMediumItalic;
+   src: url(./fonts/Portrait-MediumItalic.woff);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+   background: url(./images/bg-2440.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+#center-group {
+   position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo {
+   display: block;
+	margin-left: auto;
+	margin-right: auto;
+   width: 60%;
+}
+
+#date {
+   font-family: brownStdRegular;
+   font-size: 70%;
+	color: #4E99AA;
+	text-align: center;
+   margin-top: 2em;
+   -webkit-transition: transform 0.5s ease-in-out;
+}
+
+#date:hover {
+   -webkit-transform: scale(1.2);
+   -webkit-transition: transform 0.5s ease-in-out;
+}
+
+#signup-form  {
+   display: flex;
+  	flex-direction: row;
+	margin-top: 2.5em;
+	background: white;
+	border-radius: 0.125em;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+#signup-input {
+   flex-grow: 2;
+	border: none;
+	padding: 1em;
+	border-radius: 0.125em;
+   font-family: portraitMediumItalicl;
+   font-style: italic;
+}
+
+#signup-input::placeholder {
+   font-family: portraitMediumItalicl;
+   font-style: italic;
+   color: rgba(0, 0, 0, 0.5);
+}
+
+#signup-input:focus {
+   outline: none;
+}
+
+#signup-button {
+   border: none;
+  	background: #2E707C;
+  	color: white;
+	margin: 0.5em;
+	border-radius: 0.125em;
+   padding-left: 0.875em;
+   padding-right: 0.875em;
+}
+
+#top-bar {
+   display: flex;
+   justify-content: space-between;
+}
+
+.button {
+   display: inline-block;
+   padding: 0.4em 0.8em;
+   margin: 4em 6em 4em 6em;
+   border:0.16em solid rgba(255,255,255,0);
+   border-radius: 24px;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-size: 0.6em;
+   font-family: brownStdRegular;
+   color:#FFFFFF;
+   background-color: rgba(222, 222, 222, 0.4);
+   text-align:center;
+   transition: all 0.2s;
+}
+
+.button:hover {
+   border-color: rgba(255,255,255,1);
+}
+
+#message {
+   font-family: brownStdRegular;
+   color: rgb(32, 134, 25);
+   background-color: rgba(216, 255, 209, 0.7);
+   height: 2em;
+   width: 15em;
+   text-align: center;
+   line-height: 2em;
+   border-radius: 5px;
+   margin: auto;
+}
+
+@media only screen and (max-width: 1440px) {
+   html {
+      background: url(./images/bg-1440.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+   }
+}
+
+@media only screen and (max-width: 720px) {
+   html {
+      background: url(./images/bg-720.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   html {
+      background: url(./images/bg-mobile.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+   }
+
+   .button {
+      margin: 2em 2em 0 2em;
+      font-size: 8pt;
+   }
+
+   #center-group {
+      width: 85%;
+   }
+
+   #date {
+      font-size: 1em;
+      margin-top: 1.5em;
+   }
+
+   #signup-form {
+      margin-top: 2em;
+      height: 40px;
+   }
 }
